@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://cqow47bch5ocs"]
+[gd_scene load_steps=15 format=4 uid="uid://cqow47bch5ocs"]
 
 [ext_resource type="Texture2D" uid="uid://coovudglr7ja2" path="res://assets/Cattopia.png" id="1_c01mt"]
 [ext_resource type="PackedScene" uid="uid://dcfyx3omcemb5" path="res://scenes/player.tscn" id="1_elqb8"]
@@ -284,6 +284,8 @@ tile_size = Vector2i(18, 18)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_c01mt")
 
+[sub_resource type="LabelSettings" id="LabelSettings_nxtc6"]
+
 [node name="Level" type="Node2D"]
 metadata/_edit_vertical_guides_ = [76.0]
 
@@ -353,4 +355,14 @@ offset_left = -369.0
 offset_top = -69.0
 offset_right = -244.0
 offset_bottom = -46.0
-text = "collect the coins"
+text = "collect the coins
+"
+label_settings = SubResource("LabelSettings_nxtc6")
+
+[node name="label2" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = 650.0
+offset_top = -11.0
+offset_right = 765.0
+offset_bottom = 12.0
+text = "Collect the fish"
