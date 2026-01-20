@@ -296,7 +296,7 @@ texture = ExtResource("1_c01mt")
 position = Vector2(479, -48)
 
 [node name="Killzone" parent="." instance=ExtResource("5_jlsqs")]
-position = Vector2(-742, 187)
+position = Vector2(-697.00006, 1068)
 rotation = 0.014317255
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Killzone"]
@@ -325,11 +325,32 @@ tile_map_data = PackedByteArray("AADj/wIAAQABAAEAAADk/wIAAQACAAEAAADl/wIAAQACAAE
 tile_set = SubResource("TileSet_nxtc6")
 
 [node name="coin" parent="." instance=ExtResource("7_jlsqs")]
-position = Vector2(-338, 27)
+position = Vector2(-204, 67)
+
+[node name="coin6" parent="." instance=ExtResource("7_jlsqs")]
+position = Vector2(-204, 67)
+
+[node name="coin7" parent="." instance=ExtResource("7_jlsqs")]
+position = Vector2(-204, 67)
+
+[node name="coin8" parent="." instance=ExtResource("7_jlsqs")]
+position = Vector2(-146, 65)
+
+[node name="coin2" parent="." instance=ExtResource("7_jlsqs")]
+position = Vector2(250, 101)
+
+[node name="coin3" parent="." instance=ExtResource("7_jlsqs")]
+position = Vector2(941, 114)
+
+[node name="coin4" parent="." instance=ExtResource("7_jlsqs")]
+position = Vector2(335, 8)
+
+[node name="coin5" parent="." instance=ExtResource("7_jlsqs")]
+position = Vector2(5, 125)
 
 [node name="Label" type="Label" parent="."]
-offset_left = -373.0
+offset_left = -369.0
 offset_top = -69.0
-offset_right = -256.0
+offset_right = -244.0
 offset_bottom = -46.0
-text = "collect the coin"
+text = "collect the coins"
