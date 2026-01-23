@@ -7,14 +7,15 @@
 size = Vector2(117.539024, 62.310364)
 
 [node name="Fish" type="Area2D"]
-scale = Vector2(0.71465623, 0.71416664)
+scale = Vector2(1.001, 1)
 script = ExtResource("1_8g0i4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(2.1179094, 1.7689631)
+scale = Vector2(2.395, 2)
 texture = ExtResource("1_n6yr6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4.9950047, 9)
 scale = Vector2(0.9999999, 1)
 shape = SubResource("RectangleShape2D_q8u5g")
 
