@@ -1,5 +1,5 @@
 extends Area2D
 
-func _on_body_entered(body):
-	print("+1 fish!")
+func _on_body_entered(_body: Node2D) -> void:
+	print("Yooohooooooo")
 	queue_free()

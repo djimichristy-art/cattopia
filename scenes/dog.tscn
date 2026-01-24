@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://dowmmfx3urlhn"]
+
+[ext_resource type="Texture2D" uid="uid://cvy5tjyvl5vmo" path="res://assets/brown.png" id="1_on80e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwjdu"]
+atlas = ExtResource("1_on80e")
+region = Rect2(32, 132, 32, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjqk5"]
+atlas = ExtResource("1_on80e")
+region = Rect2(64, 132, 32, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmowd"]
+atlas = ExtResource("1_on80e")
+region = Rect2(96, 132, 32, 33)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tpbal"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vwjdu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjqk5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmowd")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 7.0
+}]
+
+[node name="dog" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_tpbal")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.16473523

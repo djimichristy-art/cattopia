@@ -1,22 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://cg14317jasr2n"]
+[gd_scene load_steps=4 format=3 uid="uid://0e0xbf08hga6"]
 
-[ext_resource type="Script" uid="uid://cw7tfo3gmnk4r" path="res://scripts/fish.gd" id="1_8g0i4"]
+[ext_resource type="Script" uid="uid://l43yvhsucenu" path="res://scripts/fish.gd" id="1_8g0i4"]
 [ext_resource type="Texture2D" uid="uid://bd37re4u1uwoy" path="res://assets/fish.png" id="1_n6yr6"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q8u5g"]
-size = Vector2(117.539024, 62.310364)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n6yr6"]
+size = Vector2(50, 27)
 
 [node name="Fish" type="Area2D"]
-scale = Vector2(1.001, 1)
 script = ExtResource("1_8g0i4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(2.395, 2)
 texture = ExtResource("1_n6yr6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4.9950047, 9)
-scale = Vector2(0.9999999, 1)
-shape = SubResource("RectangleShape2D_q8u5g")
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_n6yr6")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -148,7 +148,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3vyb7"]
-size = Vector2(46, 32)
+size = Vector2(24, 20)
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 5
@@ -156,11 +156,9 @@ collision_layer = 2
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(2.296875, 2.182908)
 sprite_frames = SubResource("SpriteFrames_d2wvv")
 animation = &"Run"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4, 0)
 shape = SubResource("RectangleShape2D_3vyb7")
