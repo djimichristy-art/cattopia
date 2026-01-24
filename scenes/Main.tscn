@@ -305,9 +305,6 @@ shape = SubResource("WorldBoundaryShape2D_lhr70")
 [node name="Player" parent="." instance=ExtResource("1_elqb8")]
 position = Vector2(-456, 3)
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(2, 2)
-
 [node name="platform" parent="." instance=ExtResource("3_0bbpv")]
 position = Vector2(1222, 59)
 

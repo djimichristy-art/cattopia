@@ -7,7 +7,7 @@ extends CharacterBody2D
 var speed = 100
 var direction = 1
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	
 	velocity.x = direction * speed
 	
@@ -17,7 +17,3 @@ func _physics_process(delta: float) -> void:
 		direction = -1
 	
 	move_and_slide()
-
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
