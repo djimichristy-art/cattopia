@@ -1,8 +1,10 @@
-[gd_scene load_steps=13 format=4 uid="uid://b0ratxv4m6i4m"]
+[gd_scene load_steps=15 format=4 uid="uid://b0ratxv4m6i4m"]
 
 [ext_resource type="Texture2D" uid="uid://cm0qme40ec5ej" path="res://assets/Cattopia2.png" id="1_qwp14"]
 [ext_resource type="PackedScene" uid="uid://dqgvg7ek30774" path="res://scenes/killzone.tscn" id="3_0jmjk"]
 [ext_resource type="PackedScene" uid="uid://dcfyx3omcemb5" path="res://scenes/player.tscn" id="4_v8268"]
+[ext_resource type="PackedScene" uid="uid://2oqfqxx5b61g" path="res://scenes/enemy.tscn" id="4_xpq2v"]
+[ext_resource type="PackedScene" uid="uid://0e0xbf08hga6" path="res://scenes/fish.tscn" id="5_0jmjk"]
 [ext_resource type="Texture2D" uid="uid://d3ksoiidtvnjm" path="res://assets/Tile maps/industrial.png" id="5_4p0dt"]
 [ext_resource type="PackedScene" uid="uid://svrmp1ppuviw" path="res://scenes/Platform.tscn" id="5_rcugv"]
 [ext_resource type="PackedScene" uid="uid://cnil5acik6mjr" path="res://scenes/coin.tscn" id="7_khw7m"]
@@ -226,8 +228,14 @@ shape = SubResource("WorldBoundaryShape2D_lhr70")
 [node name="Player" parent="." instance=ExtResource("4_v8268")]
 position = Vector2(-11432, 639)
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="Camera2D2" type="Camera2D" parent="Player"]
 zoom = Vector2(2, 2)
+
+[node name="Enemy" parent="Player" instance=ExtResource("4_xpq2v")]
+position = Vector2(1028, 103)
+
+[node name="Fish" parent="Player" instance=ExtResource("5_0jmjk")]
+position = Vector2(796, 81)
 
 [node name="Platform2" parent="." instance=ExtResource("5_rcugv")]
 position = Vector2(151, 43)
