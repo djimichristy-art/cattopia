@@ -14,7 +14,9 @@ func _physics_process(_delta: float) -> void:
 	
 	if ray_left.is_colliding():
 		direction = 1
+		animated_sprite.flip_h = false
 	elif ray_right.is_colliding():
 		direction = -1
+		animated_sprite.flip_h = true
 	
 	move_and_slide()

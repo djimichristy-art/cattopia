@@ -1,8 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://dcfyx3omcemb5"]
+[gd_scene load_steps=12 format=3 uid="uid://dcfyx3omcemb5"]
 
 [ext_resource type="Script" uid="uid://wddgu6jaiy0m" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://cix8oyc8msbhd" path="res://assets/orange_0.png" id="2_qhqgy"]
-[ext_resource type="AudioStream" uid="uid://cfs5goaem4kqy" path="res://assets/sounds/pickupCoin.wav" id="3_qhqgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("2_qhqgy")
@@ -92,9 +91,3 @@ shape = SubResource("RectangleShape2D_3vyb7")
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
-
-[node name="PickupCoinSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_qhqgy")
-
-[node name="PickupFishSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_qhqgy")
