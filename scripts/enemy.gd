@@ -4,6 +4,7 @@ extends CharacterBody2D
 @onready var ray_right: RayCast2D = $RayRight
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
+
 var speed = 100
 var direction = 1
 
