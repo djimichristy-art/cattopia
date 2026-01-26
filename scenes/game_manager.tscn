@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dgh805nlclt3j"]
+[gd_scene load_steps=6 format=3 uid="uid://dgh805nlclt3j"]
 
 [ext_resource type="Script" uid="uid://dejy2avrm7x85" path="res://scripts/game_manager.gd" id="1_hwd4i"]
 [ext_resource type="AudioStream" uid="uid://cfs5goaem4kqy" path="res://assets/sounds/pickupCoin.wav" id="2_oo155"]
 [ext_resource type="AudioStream" uid="uid://ond8lrpeqj4g" path="res://addons/field_theme_1.wav" id="3_eaq8r"]
 [ext_resource type="Script" uid="uid://bemqi23770uby" path="res://scenes/main_game_music.gd" id="4_ternb"]
+[ext_resource type="AudioStream" uid="uid://dj67bstp4iob" path="res://assets/sounds/goodresult-82807 (1).mp3" id="5_eaq8r"]
 
 [node name="GameManager" type="Node2D"]
 script = ExtResource("1_hwd4i")
@@ -18,3 +19,6 @@ stream = ExtResource("2_oo155")
 stream = ExtResource("3_eaq8r")
 volume_db = -10.0
 script = ExtResource("4_ternb")
+
+[node name="Final" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_eaq8r")

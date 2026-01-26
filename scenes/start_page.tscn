@@ -1,0 +1,116 @@
+[gd_scene load_steps=9 format=3 uid="uid://b7dooro41ddf5"]
+
+[ext_resource type="FontFile" uid="uid://mmpq5xe15d8y" path="res://assets/LINESeedJP-Bold.ttf" id="1_mx1rd"]
+[ext_resource type="Script" uid="uid://dckatdcy8kmhl" path="res://scripts/start_page.gd" id="1_nditi"]
+[ext_resource type="PackedScene" uid="uid://cqow47bch5ocs" path="res://scenes/Main.tscn" id="2_k3ce8"]
+[ext_resource type="StyleBox" uid="uid://cwd35jtj1c7tj" path="res://start_page_button.tres" id="2_urypa"]
+
+[sub_resource type="Gradient" id="Gradient_urypa"]
+colors = PackedColorArray(1, 0.5074339, 0.7247113, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ea24q"]
+gradient = SubResource("Gradient_urypa")
+fill_to = Vector2(0, 1.85)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ea24q"]
+bg_color = Color(0.3328807, 0.33288068, 0.33288068, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ned2h"]
+bg_color = Color(0.44291076, 0.44291076, 0.44291073, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+
+[node name="StartPage" type="Node2D"]
+script = ExtResource("1_nditi")
+next_level = ExtResource("2_k3ce8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_ea24q")
+
+[node name="Title" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -276.0
+offset_top = -253.0
+offset_right = 276.0
+offset_bottom = -124.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_mx1rd")
+theme_override_font_sizes/font_size = 116
+text = "Cattopia"
+
+[node name="Story" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -511.0
+offset_top = -97.0
+offset_right = 511.0
+offset_bottom = 287.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 22
+text = "Meet Whiskers, a clever cat with a big problem.
+Whiskers works hard to pay the family bills and save up for tasty treats.
+
+But one day—oh no!—a group of mischievous dogs sneak in and steal all the food! 🐶💨
+
+Now Whiskers must go on an adventure to get the treats back.
+Jump, dodge, and explore different places, collect shiny coins, and chase the dogs away.
+
+Help Whiskers earn enough coins, pay the bills, and bring food back home! 🪙🐾"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -102.0
+offset_top = -92.0
+offset_right = 102.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.008202003, 0.008202028, 0.008202062, 1)
+theme_override_fonts/font = ExtResource("1_mx1rd")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = ExtResource("2_urypa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ea24q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ned2h")
+text = "PLAY"
+
+[connection signal="pressed" from="CanvasLayer/Control/Button" to="." method="_on_button_pressed"]

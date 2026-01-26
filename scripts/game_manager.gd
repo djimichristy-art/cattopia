@@ -5,6 +5,7 @@ var score = 0
 
 @onready var pickup_coin_sound: AudioStreamPlayer = $PickupCoinSound
 @onready var pickup_fish_sound: AudioStreamPlayer = $PickupFishSound
+@onready var final: AudioStreamPlayer = $Final
 
 
 func add_point():
@@ -17,3 +18,7 @@ func play_coin_sound():
 
 func play_fish_sound():
 	pickup_fish_sound.play()
+
+func play_finale():
+	final.play()
+	pass
